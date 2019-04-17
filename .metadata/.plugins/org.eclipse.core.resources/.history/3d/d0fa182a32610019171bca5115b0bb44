@@ -1,0 +1,17 @@
+
+public class Precinct {
+	
+	private String name;
+	private String address;
+	private int population;
+	
+	public Precinct(String name, String address, int population) {
+		this.name = name;
+		this.address = address;
+		this.population = population;
+	}
+	
+	public String toString() {
+		return "Precinct: "+name+", Address: "+address+", Population: "+population;
+	}
+}

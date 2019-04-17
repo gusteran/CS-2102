@@ -1,0 +1,9 @@
+
+public class RoboticsTeam implements IContestant{
+
+	String school;
+	String specialFeature;
+	int rank;
+	
+	public RoboticsTeam()
+}

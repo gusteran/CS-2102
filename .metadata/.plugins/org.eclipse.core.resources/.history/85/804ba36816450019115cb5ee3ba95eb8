@@ -1,0 +1,52 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Examples {
+
+//	@Test
+//	void test() {
+//		fail("Not yet implemented");
+//	}
+	
+	static RoboticsTeam rbe1 = new RoboticsTeam("AB", "everything", 1);
+	static RoboticsTeam rbe2 = new RoboticsTeam("CC", "nothing", 2);
+	RoboticsResult rbeR = new RoboticsResult(rbe1, rbe2, 10, 4, false, 8, 3, true);
+
+	@Test
+	void robotComp() {
+		assertEquals(Match.winner(rbeR).toString(), rbe1.toString());
+	}
+	
+	@Test
+	void rbe1Score() {
+		rbeR.getScore();
+		assertEquals(rbeR.team1score, 14);
+	}
+	
+	@Test
+	void rbe2Score() {
+		rbeR.getScore();
+		assertEquals(rbeR.team2score, 6);
+	}
+	
+	@Test
+	void basicRBEExpectBeat() {
+		assertTrue(rbe1.rank>rbe2.rank);
+	}
+	
+	@Test
+	void rbe1ExpectBeat() {
+		assertTrue(rbe1.expectToBeat(rbe2));
+	}
+	
+	@Test
+	void rbe2ExpectBeat() {
+		assertFalse(rbe2.expectToBeat(rbe1));
+	}
+	
+//	public static void main(String[] args) {
+//		System.out.println(rbe1);
+//		System.out.println(rbe2);
+//	}
+}

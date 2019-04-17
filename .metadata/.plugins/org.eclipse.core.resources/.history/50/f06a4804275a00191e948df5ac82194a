@@ -1,0 +1,19 @@
+
+public class HeapChecker {
+	
+	public boolean addEltTester(IHeap hOrig, int elt, IBinTree hAdded) {
+		return isHeap(hAdded);
+	}
+	
+	public boolean remMinEltTester(IHeap hOrig, IBinTree hRemoved) {
+		return isHeap(hRemoved);
+	}
+	
+	public boolean isHeap(IBinTree heap) {
+		if(heap!=null & heap.size()>1) {
+			return isHeap(heap.getLeft()) & isHeap(heap.getRight());
+		}
+		return true;
+	}
+	
+}

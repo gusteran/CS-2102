@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="RugbyTeam"/>
+<fullyQualifiedTypeName name="Match"/>
+<fullyQualifiedTypeName name="RugbyResult"/>
+<fullyQualifiedTypeName name="Boa"/>
+<fullyQualifiedTypeName name="Tournament"/>
+<fullyQualifiedTypeName name="InitRound"/>
+<fullyQualifiedTypeName name="AdvancedRound"/>
+<fullyQualifiedTypeName name="MaxHzReport"/>
+<fullyQualifiedTypeName name="Earthquake1"/>
+<fullyQualifiedTypeName name="ShowManager2"/>
+<fullyQualifiedTypeName name="employees.Team"/>
+<fullyQualifiedTypeName name="VoteBooth"/>
+<fullyQualifiedTypeName name="ShowSummary"/>
+<fullyQualifiedTypeName name="HeapChecker"/>
+<fullyQualifiedTypeName name="DataHeap"/>
+<fullyQualifiedTypeName name="MtHeap"/>
+<fullyQualifiedTypeName name="EmptyBST"/>
+<fullyQualifiedTypeName name="EventGuests"/>
+<fullyQualifiedTypeName name="MyLinkedList"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="Precinct"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="DailyWeatherReport"/>
+<fullyQualifiedTypeName name="WeatherMonitor"/>
+</qualifiedTypeNameHistroy>

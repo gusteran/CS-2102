@@ -1,0 +1,56 @@
+import java.util.LinkedList;
+
+public class HeapChecker {
+	
+	/**
+	 * 
+	 * @param hOrig
+	 * @param elt
+	 * @param hAdded
+	 * @return
+	 */
+	public boolean addEltTester(IHeap hOrig, int elt, IBinTree hAdded) {
+		if(isHeap(hAdded)) {
+			IHeap hOrigNode = hOrig;
+			while(hOrigNode.size()>1) {
+				
+			}
+		}
+		return false;
+	}
+	
+	public boolean remMinEltTester(IHeap hOrig, IBinTree hRemoved) {
+		return isHeap(hRemoved);
+	}
+	
+	/**
+	 * Checks to see if a Binary Tree is a Heap
+	 * @param binTree the binary tree that could be a heap
+	 * @return whether a boolean of if it is a heap
+	 */
+	public boolean isHeap(IBinTree binTree) {
+		if(binTree.size()>1) {
+			return !((IHeap)binTree).isBigger((int)binTree.getLeft().getElt()) 
+					& !((IHeap)binTree).isBigger((int)binTree.getRight().getElt()) 
+					& isHeap(binTree.getLeft()) 
+					& isHeap(binTree.getRight());
+		}
+		return true;
+	}
+	
+	public LinkedList<Object> treeToList(IBinTree heap){
+		LinkedList<Object> list = new LinkedList<Object>();
+		list.add(heap.getElt());
+		treeToList(heap, list);
+		return list;
+	}
+	
+	public void treeToList(IBinTree heap, LinkedList<Object> list) {
+		if(heap.size()>0) list.add(heap.getElt());
+		if(heap.size()>1) {
+			treeToList(heap.getLeft(), list);
+			treeToList(heap.getRight(), list);
+		}
+	}
+	
+}

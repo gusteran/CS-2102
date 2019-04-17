@@ -1,0 +1,11 @@
+
+public class RugbyTeam implements IContestant{
+
+	String country;
+	String jerseyColor;
+	boolean ritual;
+	int wins;
+	int losses;
+	
+	
+}

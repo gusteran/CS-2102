@@ -1,0 +1,8 @@
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Precinct worcester12;
+		worcester12 = new Precinct("Worcester12", "130 Winter Street", 1673);
+	}
+}
