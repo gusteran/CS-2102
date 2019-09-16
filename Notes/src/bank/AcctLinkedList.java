@@ -1,4 +1,5 @@
 package bank;
+
 import java.util.LinkedList;
 
 public class AcctLinkedList implements IAcctDataStructure {

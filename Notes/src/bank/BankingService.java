@@ -1,4 +1,5 @@
 package bank;
+
 import java.util.LinkedList;
 
 class Customer {
@@ -10,13 +11,18 @@ class Customer {
 	  return this.name.equals(name);
   }
   
-  public boolean checkPassword(int passsword) {
+  public boolean checkPassword(int password) {
 	  return this.password == password;
   }
   
   public String getName() {
 	  return name;
   }
+  
+  Customer(String name, int password) {
+	    this.name = name;
+	    this.password = password;
+	  }
 
   
 }
@@ -50,6 +56,11 @@ class BankingService {
   private IAcctDataStructure accounts;   
   private ICustDataStructure customers; 
   
+  BankingService(IAcctDataStructure accounts, ICustDataStructure customers) {
+	    this.accounts = accounts;
+	    this.customers = customers;
+	  }
+  
   double getBalance(int forAcctNum) { 
 	Account myAccount = accounts.findByNumber(forAcctNum);
 	return myAccount.getBalance();
@@ -61,10 +72,9 @@ class BankingService {
 	return amt;
   }
   
-  String login(String custname, int withPwd) {
+  String login(String custname, int withPwd) throws CustomerNotFoundException, LoginFailedException {
 	Customer cust = customers.findCustomerByNameAndPassword(custname, withPwd);
 	return "Welcome";
-
   }
     
 }

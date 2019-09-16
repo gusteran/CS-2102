@@ -1,5 +1,6 @@
 package bank;
 
+
 public class AcctBinarySearchTree implements IAcctDataStructure {
 
 	private Account thisAcct;
